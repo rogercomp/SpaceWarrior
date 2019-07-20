@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 07/11/2018, 19:10:51
+    Author     : roger
+*/
+
+* {margin: 0;}
+body {
+    background-image: url(../imagens/fundo_jogo.png);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.caixa {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 75%;
+    height: 80%;
+
+}
+
+.jogadores {
+
+    display: flex;
+    margin: 3px;
+    height: 40px;
+}
+
+.ptosJogadores {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 20%;
+    font-size: 30px;
+    font-family: 40px;
+}
+.tabela {
+    width: 100%;
+    margin: 0px;
+}
+tr td {
+    margin: 0px;
+    height: 9px;
+}
+.nroRanking {
+    background-color: rgba(11,15,185,0.2);
+    color: white;
+    /*font-family: anton;*/
+    font-family: 'Audiowide', cursive;
+    padding: 4px;
+    text-shadow: 2px 2px 2px gray;
+    text-align: center;
+    border-radius: 10%;
+    box-shadow: 1px 1px 0px white;
+
+}
+.nomeRanking {
+    background-color: rgba(11,15,185,0.2);
+    color: white;
+    /*font-family: audiowide;*/
+    font-family: 'Audiowide', cursive;
+    padding: 5px;
+    text-shadow: 2px 2px 2px rgba(11,15,185,1);
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0px white;
+
+}
+.pontuacaoRanking {
+    background-color: rgba(11,15,200,0.5);
+    box-shadow: 1px 1px 0px white;
+    border-radius: 10px;
+    color: #63FF04;
+    font-family: audiowide;
+    padding: 4px;
+    text-shadow: 2px 2px 2px gray;
+    text-align: center;
+    font-size: 25px;
+    letter-spacing: 5px;
+}
+.caixaBotao {
+    text-align: center;  
+}
+
+.tituloRanking {
+    text-align: center;
+    font-family: 'Audiowide', cursive;
+    font-size: 60px;
+    text-shadow: 3px 3px 4px rgba(11,15,185,1);
+}
+

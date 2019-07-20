@@ -1,0 +1,379 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26/09/2018, 10:31:58
+    Author     : roger
+*/
+
+* {
+    font-family: 'Audiowide', cursive;
+    outline: none;
+}
+
+
+body {
+    background: url('../imagens/bg5.jpg') no-repeat center center fixed;
+    b-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 10px;
+}
+
+    .caixaExternaEsquerda {
+                width: 450px;
+                height: 450px;
+                margin: 0 auto;
+                margin-top: 0px;
+                background-size: 450px 580px;
+               
+
+                
+                
+            }
+     .caixaExternaDireita {
+                width: 850px;
+                height: 450px;
+                margin: 0 auto;
+                margin-top: 0px;
+                background-color: rgba(0,0,0,0.5);
+                text-align: left;
+           }
+         
+      
+    .vertical-menu {
+        width: 100%; /* Set a width if you like */
+        font-size: 35px;
+        height: 70px;
+        background-color: rgba(11,15,185,0.1);
+        
+}
+
+.vertical-menu a {
+  background-color: rgba(0,0,0,0.5); /* Grey background color */
+  color: white; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 18px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+  
+  
+}
+
+.vertical-menu a:hover {
+  /*background-color: #ccc; /* Dark grey background on mouse-over */
+  letter-spacing: 45px;
+  text-shadow: 8px px 8px white;
+  color: orangered;
+  text-shadow: black;
+  letter-spacing: 8px;
+  transition: 0.5s;
+}
+
+.vertical-menu a.active {
+  background-color: rgba(30,300,30,1.0); /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+
+.formulario {
+    position: absolute;
+    left: 50%;
+    top:40%;
+    margin-top: -300px;
+    margin-left: -300px;
+    width: 100%;
+    height: 400px;
+    padding: 25px;
+    background-color: rgb(0,0,0,0);
+}
+
+.titulo {
+    color: white;
+    text-align: center;
+    font-size: 40px;   
+    padding-right: 45px;
+}
+
+* { box-sizing:border-box; }
+
+
+.container      {
+  position: absolute;
+  width:400px; 
+  left: 100px;
+  top: 100px;
+  display:block;   
+  padding:25px;
+}
+
+h1{
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 3px 3px 4px rgba(11,15,185,1);
+    color: white;
+    text-align:center; 
+    margin-bottom:5px; 
+    margin-top:5px; 
+}
+
+h1 small { 
+  font-weight:normal; 
+  color:#888; 
+  display:block; 
+}
+
+h2{
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 5px 5px 4px rgba(100,130,185,1);
+    color: white;
+    text-align:center; 
+    margin-bottom:5px; 
+    margin-top:5px; 
+}
+
+
+.footer     { text-align:center; }
+.footer a  { color:#53B2C8; }
+
+.group            { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+
+input  {
+  font-size:18px;
+  background-size: 70px 70px;  
+  border:none;
+  background-color: rgb(255,255,255,0.6);
+  padding:5px;
+  padding: 15px;
+  width: 300px;
+}
+input:focus         { outline:none; }
+
+
+label                {
+  color:#333333; 
+  font-size:22px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  text-shadow: 2px 2px 2px gray;
+  left:5px;
+  top:10px;
+  transition:0.3s ease all; 
+  -moz-transition:0.3s ease all; 
+  -webkit-transition:0.3s ease all;
+  letter-spacing: 3px;
+
+}
+/* campo quando fica com foco */
+input:focus ~ label, input.used ~ label 		{
+  top:-34px;
+  font-size:23px;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  letter-spacing: 1px;
+  
+}
+
+/* campo quando fica valido */
+input:valid ~ label , input:valid.used ~ label{
+  color:  #ffffff;
+}
+
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+}
+
+input:valid ~ .hightlight {
+    -webkit-animation:validHighlighter 0.3s ease;
+}
+
+
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px;
+  width: 300px;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+input:valid ~ .bar:before, input:valid ~ .bar:after{
+    background: #006633 !important;
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  transition:0.2s ease all;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+
+@-webkit-keyframes inputHighlighter {
+	from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+
+@-webkit-keyframes validHighlighter {
+	from { background:#4fc24f !important; }
+  to 	{ width:0; background:transparent; }
+}
+
+input[type="email"] {
+  border: 1px solid #ddd;
+  padding: 4px 8px;
+}
+
+
+input[type="button"] {
+    margin-top: 30px;
+    background-image: linear-gradient(rgb(230, 230, 230), rgb(0, 0, 0));
+    bakcground-dolor: rgba(0,0,0,0.2);
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    width: 60%;
+    border: 1px solid rgb(57,12,15);    
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgb(0,0,0);
+    cursor: pointer;
+    transition: all 0.3s;    
+}
+input[type="button"]:hover{    
+    text-shadow: 0px 0px 0px black;
+    text-shadow: 2px 2px 2px white;   
+    background-image: linear-gradient(rgb(0, 0, 0), rgb(255, 255, 255));
+}
+input[type="button"]:active{
+    transform: scale(0.98);
+}
+
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+/* Configurações dos alerts da tela  */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert h4 {
+  margin-top: 0;
+  color: inherit;
+}
+.alert .alert-link {
+  font-weight: bold;
+}
+.alert > p,
+.alert > ul {
+  margin-bottom: 0;
+}
+.alert > p + p {
+  margin-top: 5px;
+}
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px;
+}
+.alert-dismissable .close,
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  right: -21px;
+  color: inherit;
+}
+.alert-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.alert-success hr {
+  border-top-color: #c9e2b3;
+}
+.alert-success .alert-link {
+  color: #2b542c;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-info hr {
+  border-top-color: #a6e1ec;
+}
+.alert-info .alert-link {
+  color: #245269;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-warning hr {
+  border-top-color: #f7e1b5;
+}
+.alert-warning .alert-link {
+  color: #66512c;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert-danger hr {
+  border-top-color: #e4b9c0;
+}
+.alert-danger .alert-link {
+  color: #843534;
+}
+
+
+/*     */
+.btn-custom {
+	padding: 1px 15px 3px 2px;
+	border-radius: 50px;
+}
+
+.btn-icon {
+	padding: 8px;
+	background: #ffffff;
+}
+
